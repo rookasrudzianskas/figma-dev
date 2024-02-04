@@ -508,18 +508,18 @@ const Home = () => {
       />
 
       <section className='flex h-full flex-row'>
-        {/*<LeftSidebar allShapes={Array.from(canvasObjects)} />*/}
+        <LeftSidebar allShapes={Array.from(canvasObjects)} />
 
-        {/*<Live canvasRef={canvasRef} undo={undo} redo={redo} />*/}
+        <Live canvasRef={canvasRef} undo={undo} redo={redo} />
 
-        {/*<RightSidebar*/}
-        {/*  elementAttributes={elementAttributes}*/}
-        {/*  setElementAttributes={setElementAttributes}*/}
-        {/*  fabricRef={fabricRef}*/}
-        {/*  isEditingRef={isEditingRef}*/}
-        {/*  activeObjectRef={activeObjectRef}*/}
-        {/*  syncShapeInStorage={syncShapeInStorage}*/}
-        {/*/>*/}
+        <RightSidebar
+          elementAttributes={elementAttributes}
+          setElementAttributes={setElementAttributes}
+          fabricRef={fabricRef}
+          isEditingRef={isEditingRef}
+          activeObjectRef={activeObjectRef}
+          syncShapeInStorage={syncShapeInStorage}
+        />
       </section>
     </main>
   );
