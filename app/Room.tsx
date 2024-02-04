@@ -3,7 +3,7 @@
 import { LiveMap } from "@liveblocks/client";
 import { ClientSideSuspense } from "@liveblocks/react";
 
-import Loader from "@/components/Loader";
+// import Loader from "@/components/Loader";
 import { RoomProvider } from "@/liveblocks.config";
 
 const Room = ({ children }: { children: React.ReactNode }) => {
@@ -31,7 +31,7 @@ const Room = ({ children }: { children: React.ReactNode }) => {
         canvasObjects: new LiveMap(),
       }}
     >
-      <ClientSideSuspense fallback={<Loader />}>
+      <ClientSideSuspense fallback={<div>Rokas</div>}>
         {() => children}
       </ClientSideSuspense>
     </RoomProvider>
