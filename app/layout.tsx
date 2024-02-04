@@ -19,11 +19,11 @@ const workSans = Work_Sans({
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang='en'>
-  <body className={`${workSans.className} bg-primary-grey-200`}>
-  <Room>
-    <TooltipProvider>{children}</TooltipProvider>
-  </Room>
-  </body>
+    <body className={`${workSans.className} bg-primary-grey-200`}>
+      <Room>
+        <TooltipProvider>{children}</TooltipProvider>
+      </Room>
+    </body>
   </html>
 );
 
