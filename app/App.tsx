@@ -19,7 +19,7 @@ import {
   renderCanvas,
 } from "@/lib/canvas";
 import { handleDelete, handleKeyDown } from "@/lib/key-events";
-// import { LeftSidebar, Live, Navbar, RightSidebar } from "@/components/index";
+import { LeftSidebar, Live, Navbar, RightSidebar } from "@/components/index";
 import { handleImageUpload } from "@/lib/shapes";
 import { defaultNavElement } from "@/constants";
 import { ActiveElement, Attributes } from "@/types/type";
@@ -490,22 +490,22 @@ const Home = () => {
 
   return (
     <main className='h-screen overflow-hidden'>
-      {/*<Navbar*/}
-      {/*  imageInputRef={imageInputRef}*/}
-      {/*  activeElement={activeElement}*/}
-      {/*  handleImageUpload={(e: any) => {*/}
-      {/*    // prevent the default behavior of the input element*/}
-      {/*    e.stopPropagation();*/}
+      <Navbar
+        imageInputRef={imageInputRef}
+        activeElement={activeElement}
+        handleImageUpload={(e: any) => {
+          // prevent the default behavior of the input element
+          e.stopPropagation();
 
-      {/*    handleImageUpload({*/}
-      {/*      file: e.target.files[0],*/}
-      {/*      canvas: fabricRef as any,*/}
-      {/*      shapeRef,*/}
-      {/*      syncShapeInStorage,*/}
-      {/*    });*/}
-      {/*  }}*/}
-      {/*  handleActiveElement={handleActiveElement}*/}
-      {/*/>*/}
+          handleImageUpload({
+            file: e.target.files[0],
+            canvas: fabricRef as any,
+            shapeRef,
+            syncShapeInStorage,
+          });
+        }}
+        handleActiveElement={handleActiveElement}
+      />
 
       <section className='flex h-full flex-row'>
         {/*<LeftSidebar allShapes={Array.from(canvasObjects)} />*/}
